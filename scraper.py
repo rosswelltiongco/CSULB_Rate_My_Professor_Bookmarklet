@@ -29,10 +29,10 @@ with open('ids.txt') as json_file:
 # parse through all 5,000 professors
 counter = 1
 total = len(professors)
-for professor in sorted(professors)[189:193]:
+for professor in sorted(professors):
  # print("{}: {}".format(professor, professors[professor]))
  timeSince = time.time() - startTime
- print("Time: {}s | Progress: {}/{} ({})% -  Parsing: {}".format(str(timeSince)[:3],counter,total,str(counter/total)[:5],professor))
+ print("Time: {}s | Progress: {}/{} ({})% -  Parsing: {}".format(str(timeSince)[:6],counter,total,str(counter/total)[:5],professor))
  professorRatings[professor] = getRating(professors[professor])
  counter+=1
 
