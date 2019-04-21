@@ -17,8 +17,9 @@ def getRating(professorID):
     page_soup = soup(page_html,"html.parser")
 
     containers = page_soup.find("div",{"class":"grade"})
-    rating = containers.text
-    return rating
+    if (containers):
+        rating = containers.text
+        return rating
 
 # Import file
 with open('ids.txt') as json_file:
@@ -28,7 +29,7 @@ with open('ids.txt') as json_file:
 # parse through all 5,000 professors
 counter = 1
 total = len(professors)
-for professor in sorted(professors)[:50]:
+for professor in sorted(professors)[189:193]:
  # print("{}: {}".format(professor, professors[professor]))
  timeSince = time.time() - startTime
  print("Time: {}s | Progress: {}/{} ({})% -  Parsing: {}".format(str(timeSince)[:3],counter,total,str(counter/total)[:5],professor))
