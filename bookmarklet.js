@@ -40,5 +40,5 @@ javascript:(function(){
   }
 
 
-  alert('executed successfully');
+  alert('Finished executing script');
 })();
