@@ -4,3 +4,5 @@ Finds the names of professors on a page, and replaces them with a link to their 
 # How to use it
 1) Paste the code in URL as a bookmark
 2) Click it on a page with professor names
+
+![](demo.gif)
